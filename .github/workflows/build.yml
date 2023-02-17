@@ -40,7 +40,7 @@ jobs:
             dist/*.pacman
             dist/latest*.yml
 
-      - name: Upload to artifacts - arm
+      - name: Upload to artifacts - ARM
         uses: actions/upload-artifact@main
         with:
           name: App - ARM
