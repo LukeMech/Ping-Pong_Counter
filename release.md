@@ -4,3 +4,6 @@
 
 # 🎯 Changes for v0.2
 - Add animation for updater and add basic pacman depends for live ISO package
+
+# 🐛 Bugfixes in this release
+- Fix problem preventing to see update status - run update function after window start

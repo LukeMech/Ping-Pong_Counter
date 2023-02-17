@@ -20,8 +20,6 @@ function createWindow () {
   win.maximize()
   win.loadFile(path.join(__dirname, 'html/index.html'))
 
-  autoUpdater.checkForUpdates()
-
   win.once('ready-to-show', () => {
     win.show()
   })
@@ -32,6 +30,7 @@ app.whenReady().then(() => {createWindow()})
 ipcMain.on('ask-for-AI', (event) => {
 
   mainWin = event.sender
+  autoUpdater.checkForUpdates()
 
   if (fs.existsSync(path.join(app.getPath("downloads"), "AIModel", "model.eim"))) {
     event.returnValue = true
