@@ -5,7 +5,7 @@
   "main": "src/main.js",
   "scripts": {
     "start": "electron .",
-    "dist": "electron-builder -l",
+    "dist": "electron-builder --linux -p never",
     "publish": "electron-builder build --linux -p always "
   },
   "repository": {
