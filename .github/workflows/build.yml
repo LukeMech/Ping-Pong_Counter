@@ -12,6 +12,7 @@ jobs:
       contents: write
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
 
@@ -34,7 +35,7 @@ jobs:
       - name: Update release
         uses: tubone24/update_release@v1.3.1
         with:
-          name: ${{ steps.info.outputs.ver }}
+          release_name: ${{ steps.info.outputs.ver }}
           is_append_body: true
           body_path: release.md
           draft: false
