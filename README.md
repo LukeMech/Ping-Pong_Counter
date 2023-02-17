@@ -19,10 +19,10 @@
 |   🟡   | Electron based app          | 🦺 Main app UI (User Interface) - displaying points etc., in electron (browser-based framework) |
 |   🟢   | Auto app updater            | ⚙️ Automatically update app - so it can use latest features all time |
 |   🟡   | Voice-based point counters  | 🗣️ Detecting voice commands from specific user to add and decrease points (in my neural network - in Polish language) |
-|   🟠   | Current turn                | 🎯 Show who should serve now - based on choosen amount of serves per person |
-|   🟠   | End of game                 | 🛑 Show that it's end of the game when scored choosen amount of points |
+|   🟠   | Current turn                | 🎯 Show who should serve now - based on chosen amount of serves per person |
+|   🟠   | End of game                 | 🛑 Show that it's the end of the game when scored chosen amount of points |
 |   🟠   | Timer                       | ⌚ Game time |
-|   🟠   | Voice-based timer control   | ⏲️ Detecting voice commands to start and pause game |
+|   🟠   | Voice-based timer control   | ⏲️ Detecting voice commands to start and pause the game |
 |   🔴   | GTK based app               | 👕 App UI in GTK and libadwaita - for nice gnome desktop styling and integration |
 |   ⛔   | Self-adjusting              | 🔥 Send some microphone data to Edge Impulse servers, then redownload re-trained and adjusted model |
 |   ⛔   | Full self-arbitration       | 📸 Use camera looking at ball and microphone ball noices for auto points adjusting |
