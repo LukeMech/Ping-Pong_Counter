@@ -6,13 +6,12 @@ on:
       - '**'
 
 jobs:
-  release:
+  build:
     runs-on: ubuntu-latest
     permissions:
       contents: write
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
 
@@ -24,18 +23,22 @@ jobs:
         with:
           node-version: latest
 
-      - name: Build and upload Electron app
+      - name: Build electron app
         id: info
         run: |
           sudo apt update && sudo apt install libarchive-tools
           npm install
-          npm run publish
+          npm run dist
           echo "ver=${GITHUB_REF#refs/*/}" >> $GITHUB_OUTPUT  
 
-      - name: Update release
-        uses: tubone24/update_release@v1.3.1
+      - name: Create release
+        uses: softprops/action-gh-release@master
         with:
-          release_name: ${{ steps.info.outputs.ver }}
-          is_append_body: true
+          name: ${{ steps.info.outputs.ver }}
           body_path: release.md
+          append_body: true
           draft: false
+          files: |
+            dist/*.AppImage
+            dist/*.pacman
+            dist/*.yml
