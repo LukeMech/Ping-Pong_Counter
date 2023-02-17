@@ -29,21 +29,12 @@ jobs:
           sudo apt update && sudo apt install libarchive-tools
           npm install
           npm run publish
-
-          r=$(cat release.md)        
-          r="${r//'%'/'%25'}"                          
-          r="${r//$'\n'/'%0A'}"                   
-          r="${r//$'\r'/'%0D'}"                         
-          echo "RELEASE_BODY=$r" >> $GITHUB_OUTPUT  
           echo "ver=${GITHUB_REF#refs/*/}" >> $GITHUB_OUTPUT  
 
-      - name: Edit release
-        uses: softprops/action-gh-release@master
+      - name: Update release
+        uses: tubone24/update_release@v1.3.1
         with:
           name: ${{ steps.info.outputs.ver }}
-          body: ${{ steps.info.outputs.RELEASE_BODY }}
-         
-      - name: Publish release
-        uses: softprops/action-gh-release@master
-        with:
+          is_append_body: true
+          body_path: release.md
           draft: false
