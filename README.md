@@ -32,7 +32,7 @@
 
 ****
 ⚠️ **Disclaimer:** Linux 64-bit or ARMv7 machine running **Ubuntu**, **Fedora**, **Arch Linux** or **Raspberry Pi OS** is needed to run project <br> 
-✅ ***Psst**, you can use my custom **[Arch live ISO](https://github.com/LukeMech/CustomArch)** that includes **all needed packages** and latest code (**no installation needed - just boot from USB**) or Raspberry Pi with 32-bit OS if you have one*
+✅ ***Psst**, you can use Raspberry Pi 3/4 board with 32-bit OS if you have one or, if not, use my custom **[Arch live ISO](https://github.com/LukeMech/CustomArch)** that includes **all needed packages** and latest code (**no installation needed - just boot from USB**)*
 
 ****
 
