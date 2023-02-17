@@ -46,7 +46,7 @@ jobs:
           name: App - ARM64
           path: |
             dist/*arm64*.AppImage
-            dist/latest-linux-arm.yml
+            dist/latest-linux-arm64.yml
 
       - name: Upload to artifacts - x64
         uses: actions/upload-artifact@main
