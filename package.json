@@ -1,0 +1,47 @@
+{
+  "name": "ping-pong-counter",
+  "version": "0.0.1",
+  "description": "🏓 Auto ping-pong counter app for linux - using Edge Impulse ML to recognize voice",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder -l",
+    "publish": "electron-builder build --linux -p always "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LukeMech/Ping-Pong_Counter.git"
+  },
+  "author": {
+    "name": "LukeMech",
+    "email": "81306360+LukeMech@users.noreply.github.com",
+    "url": "https://LukeMech.github.io"
+  },
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/LukeMech/Ping-Pong_Counter/issues"
+  },
+  "homepage": "https://github.com/LukeMech/Ping-Pong_Counter#readme",
+  "build": {
+    "copyright": "Copyright © ${author} 2023",
+    "linux": {
+      "publish": [
+        "github"
+      ],
+      "target": [
+        {
+          "target": "AppImage",
+          "arch": ["x64"]
+        },
+        {
+          "target": "pacman",
+          "arch": ["x64"]
+        }
+      ]
+    }
+  },
+  "devDependencies": {
+    "electron": "^23.1.0",
+    "electron-builder": "^23.6.0"
+  }
+}
