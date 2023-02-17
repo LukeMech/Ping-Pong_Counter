@@ -39,6 +39,7 @@
         },
         {
           "target": "pacman",
+          "depends": ["libvips"],
           "arch": [
             "x64"
           ]
