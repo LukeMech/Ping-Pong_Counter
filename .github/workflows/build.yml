@@ -3,7 +3,7 @@ name: Build and release
 on: [push]
 
 jobs:
-  check:
+  build:
     runs-on: ubuntu-latest
 
     permissions:
@@ -36,6 +36,15 @@ jobs:
           append_body: true
           draft: false
           files: |
+            dist/*.AppImage
+            dist/*.pacman
+            dist/latest*.yml
+
+      - name: Upload to artifacts
+        uses: actions/upload-artifact@main
+        with:
+          name: App
+          path: |
             dist/*.AppImage
             dist/*.pacman
             dist/latest*.yml
