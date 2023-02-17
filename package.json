@@ -24,6 +24,8 @@
   "homepage": "https://github.com/LukeMech/Ping-Pong_Counter#readme",
   "build": {
     "copyright": "Copyright © ${author} 2023",
+    "productName": "Ping-pong counter", 
+    "artifactName": "${productName}.${ext}",
     "linux": {
       "publish": [
         "github"
