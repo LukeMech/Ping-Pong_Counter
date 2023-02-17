@@ -25,7 +25,6 @@
     "copyright": "Copyright © ${author} 2023",
     "productName": "Ping-pong_counter",
     "artifactName": "${productName}-${arch}.${ext}",
-    "buildDependenciesFromSource": true,
     "linux": {
       "publish": [
         "github"
