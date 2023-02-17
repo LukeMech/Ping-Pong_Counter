@@ -24,7 +24,7 @@ jobs:
       - name: Build electron app
         id: info
         run: |
-          sudo apt update && sudo apt install libarchive-tools gcc make python3 build-essential
+          sudo apt update && sudo apt install libarchive-tools pkg-config libglib2.0-dev libexpat1-dev
           npm install
           npm run dist
 
