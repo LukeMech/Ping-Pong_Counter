@@ -27,7 +27,8 @@
     "artifactName": "PingPongCounter-${arch}.${ext}",
     "pacman": {
       "depends": [
-        "libvips"
+        "libvips",
+        "openjpeg2"
       ],
       "description": "Auto ping-pong counter"
     },
