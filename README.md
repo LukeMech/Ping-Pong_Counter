@@ -31,8 +31,8 @@
 ## 🛠️ Running on your own
 
 ****
-⚠️ **Disclaimer:** Linux machine running **Ubuntu**, **Fedora** or **Arch Linux** is needed to run project <br> 
-✅ ***Psst**, you can use my custom **[Arch live ISO](https://github.com/LukeMech/CustomArch)** that includes **all needed packages** and latest code (**no installation needed - just boot from USB**)*
+⚠️ **Disclaimer:** Linux 64-bit or ARMv7 machine running **Ubuntu**, **Fedora**, **Arch Linux** or **Raspberry Pi OS** is needed to run project <br> 
+✅ ***Psst**, you can use my custom **[Arch live ISO](https://github.com/LukeMech/CustomArch)** that includes **all needed packages** and latest code (**no installation needed - just boot from USB**) or Raspberry Pi with 32-bit OS if you have one*
 
 ****
 
@@ -41,7 +41,7 @@
 - Generate `.eim` file (enable **Show linux deploy options** under *Administrative zone* on the project dashboard and from **Deployment** menu choose Linux -> **x86** for PC and **ARMv7** for Raspberry) and download it
 
 **Run app:**
-- Get latest app from **[releases](https://github.com/LukeMech/Ping-Pong_Counter/releases/latest)** (look for `.AppImage` file with your architecture, for **PC** use **x64** and for Raspberry use **armv7l**)
+- Get latest app from **[releases](https://github.com/LukeMech/Ping-Pong_Counter/releases/latest)** (look for `.AppImage` file with your architecture, for **PC** use **x86_64** and for **Raspberry** use **armv7l**)
 - Copy your `.eim` file to `Downloads/AIModel` folder
 - Create blank file `do-not-update.txt` inside your `AIModel` folder, this will prevent model from being overwritten
 - Set execution permissions for AppImage and run
