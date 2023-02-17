@@ -37,9 +37,13 @@ jobs:
           echo "RELEASE_BODY=$r" >> $GITHUB_OUTPUT  
           echo "ver=${GITHUB_REF#refs/*/}" >> $GITHUB_OUTPUT  
 
-      - name: Publish release
+      - name: Edit release
         uses: softprops/action-gh-release@master
         with:
           name: ${{ steps.info.outputs.ver }}
           body: ${{ steps.info.outputs.RELEASE_BODY }}
+         
+      - name: Publish release
+        uses: softprops/action-gh-release@master
+        with:
           draft: false
