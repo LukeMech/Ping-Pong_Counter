@@ -6,7 +6,7 @@ on:
       - '**'
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -41,4 +41,4 @@ jobs:
           files: |
             dist/*.AppImage
             dist/*.pacman
-            dist/*.yml
+            dist/latest*.yml
