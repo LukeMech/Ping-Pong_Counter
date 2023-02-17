@@ -23,8 +23,8 @@
   "homepage": "https://github.com/LukeMech/Ping-Pong_Counter#readme",
   "build": {
     "copyright": "Copyright © ${author} 2023",
-    "productName": "Ping-pong_counter",
-    "artifactName": "${productName}-${arch}.${ext}",
+    "productName": "Ping-pong",
+    "artifactName": "PingPongCounter-${arch}.${ext}",
     "pacman": {
       "depends": [
         "libvips"
