@@ -17,7 +17,7 @@
 | Status |      Feature                |    Description    |
 |:------:|:----------------------------|:------------------|
 |   🟡   | Electron based app          | 🦺 Main app UI (User Interface) - displaying points etc., in electron (browser-based framework) |
-|   🟡   | In-app updater              | ⚙️ Automatically update app - so it can use latest features all time |
+|   🟢   | Auto app updater            | ⚙️ Automatically update app - so it can use latest features all time |
 |   🟡   | Voice-based point counters  | 🗣️ Detecting voice commands from specific user to add and decrease points (in my neural network - in Polish language) |
 |   🟠   | Current turn                | 🎯 Show who should serve now - based on choosen amount of serves per person |
 |   🟠   | End of game                 | 🛑 Show that it's end of the game when scored choosen amount of points |
