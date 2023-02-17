@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: latest
 
-      - name: Build electron app
+      - name: Build app
         id: info
         run: |
           sudo apt update && sudo apt install libarchive-tools libvips-dev
@@ -45,7 +45,7 @@ jobs:
         with:
           name: App - ARM
           path: |
-            dist/*armv7l*.AppImage
+            dist/*arm64*.AppImage
             dist/*latest-linux-arm.yml
 
       - name: Upload to artifacts - x64

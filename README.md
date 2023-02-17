@@ -31,17 +31,17 @@
 ## 🛠️ Running on your own
 
 ****
-⚠️ **Disclaimer:** Linux 64-bit or ARMv7 machine running **Ubuntu**, **Fedora**, **Arch Linux** or **Raspberry Pi OS** is needed to run project <br> 
-✅ ***Psst**, you can use Raspberry Pi 3/4 board with 32-bit OS if you have one or, if not, use my custom **[Arch live ISO](https://github.com/LukeMech/CustomArch)** that includes **all needed packages** and latest code (**no installation needed - just boot from USB**)*
+⚠️ **Disclaimer:** Linux 64-bit or ARM64 machine running **Ubuntu**, **Fedora**, **Arch Linux** or **Raspberry Pi OS** is needed to run project <br> 
+✅ ***Psst**, you can use Raspberry Pi 3/4 board with 64-bit OS if you have one or, if not, use my custom **[Arch live ISO](https://github.com/LukeMech/CustomArch)** that includes **all needed packages** and latest code (**no installation needed - just boot from USB**)*
 
 ****
 
 **Create Edge Impulse AI model:**
-- Build your own machine learning model using **[Edge Impulse](https://edgeimpulse.com)** (for now, use `environment` label for any voice or noice samples, `user1_up` and `user1_down` for user 1 up/down points voice samples, `user2_up` and `user2_down` for user 2 up/down points voice samples) 
-- Generate `.eim` file (enable **Show linux deploy options** under *Administrative zone* on the project dashboard and from **Deployment** menu choose Linux -> **x86** for PC and **ARMv7** for Raspberry) and download it
+- Build your own machine learning model using **[Edge Impulse](https://edgeimpulse.com)** (for now, use `environment` label for any voice or noice samples, `user1_up` and `user1_down` for user 1 up/down points voice samples, `user2_up` and `user2_down` for user 2 up/down points voice samples)
+- Generate `.eim` file (enable **Show linux deploy options** under *Administrative zone* on the project dashboard and from **Deployment** menu choose Linux -> **x86** for PC and **AArch64** for Raspberry) and download it
 
 **Run app:**
-- Get latest app from **[releases](https://github.com/LukeMech/Ping-Pong_Counter/releases/latest)** (look for `.AppImage` file with your architecture, for **PC** use **x86_64** and for **Raspberry** use **armv7l**)
+- Get latest app from **[releases](https://github.com/LukeMech/Ping-Pong_Counter/releases/latest)** (look for `.AppImage` file with your architecture, for **PC** use **x86_64** and for **Raspberry** use **arm64**)
 - Copy your `.eim` file to `Downloads/AIModel` folder and name it `model.eim`
 - Create blank file `do-not-update.txt` inside your `AIModel` folder, this will prevent model from being overwritten
 - Make sure libfuse2 is installed (`sudo apt install libfuse2` on RPi OS)
