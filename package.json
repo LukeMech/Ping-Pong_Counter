@@ -25,6 +25,10 @@
     "copyright": "Copyright © ${author} 2023",
     "productName": "Ping-pong_counter",
     "artifactName": "${productName}-${arch}.${ext}",
+    "pacman": {
+      "depends": ["libvips"],
+      "description": "Auto ping-pong counter"
+    },
     "linux": {
       "publish": [
         "github"
@@ -43,11 +47,7 @@
             "x64"
           ]
         }
-      ],
-      "pacman": {
-        "depends": ["libvips"],
-        "description": "Auto ping-pong counter"
-      }
+      ]
     }
   },
   "devDependencies": {
