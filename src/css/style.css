@@ -1,0 +1,10 @@
+@keyframes spinner {
+    0% {color: green}
+    50% {color: red;}
+    100% {color: green}
+}
+
+.anim {
+    animation: spinner 2s infinite;
+    font-weight: bold;
+}

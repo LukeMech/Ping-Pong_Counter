@@ -1,6 +1,6 @@
 {
   "name": "ping-pong-counter",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "🏓 Auto ping-pong counter app for linux - using Edge Impulse ML to recognize voice",
   "main": "src/main.js",
   "scripts": {
@@ -26,7 +26,9 @@
     "productName": "Ping-pong_counter",
     "artifactName": "${productName}-${arch}.${ext}",
     "pacman": {
-      "depends": ["libvips"],
+      "depends": [
+        "libvips"
+      ],
       "description": "Auto ping-pong counter"
     },
     "linux": {

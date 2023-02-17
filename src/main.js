@@ -10,7 +10,7 @@ function createWindow () {
     width: 800,
     height: 600,
     webPreferences: {
-      preload: path.join(__dirname, 'preloader.js'),
+      preload: path.join(__dirname, 'js/preloader.js'),
       nodeIntegration: true
     },
     show: false
@@ -18,7 +18,7 @@ function createWindow () {
 
   win.setTitle(`🏓 Ping-pong counter ${require('../package.json').version}`);
   win.maximize()
-  win.loadFile(path.join(__dirname, 'index.html'))
+  win.loadFile(path.join(__dirname, 'html/index.html'))
 
   autoUpdater.checkForUpdates()
 

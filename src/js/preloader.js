@@ -1,5 +1,4 @@
 const ipcRenderer = require('electron').ipcRenderer;
-const version = require('../package.json').version
 
 // const AIAvailable = ipcRenderer.send('ask-for-AI')
 ipcRenderer.send('ask-for-AI')
