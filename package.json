@@ -39,12 +39,15 @@
         },
         {
           "target": "pacman",
-          "depends": ["libvips"],
           "arch": [
             "x64"
           ]
         }
-      ]
+      ],
+      "pacman": {
+        "depends": ["libvips"],
+        "description": "Auto ping-pong counter"
+      }
     }
   },
   "devDependencies": {
