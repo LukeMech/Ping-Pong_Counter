@@ -40,11 +40,19 @@ jobs:
             dist/*.pacman
             dist/latest*.yml
 
-      - name: Upload to artifacts
+      - name: Upload to artifacts - arm
+        uses: actions/upload-artifact@main
+        with:
+          name: App - ARM
+          path: |
+            dist/*armv7l*.AppImage
+            dist/*latest-linux-arm.yml
+
+      - name: Upload to artifacts - x64
         uses: actions/upload-artifact@main
         with:
           name: App
           path: |
-            dist/*.AppImage
+            dist/*x*64*.AppImage
             dist/*.pacman
-            dist/latest*.yml
+            dist/latest-linux.yml
