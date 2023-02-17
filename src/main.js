@@ -1,6 +1,5 @@
 const { app, BrowserWindow } = require('electron')
 const path = require('path')
-const preferences = require('./preferences.json')
 
 function createWindow () {
   const win = new BrowserWindow({
@@ -11,8 +10,7 @@ function createWindow () {
     }
   })
 
-  if(preferences.maximizeOnStartup) win.maximize()
-
+  win.maximize()
   win.loadFile(path.join(__dirname, 'index.html'))
 }
 
@@ -21,3 +19,5 @@ app.whenReady().then(() => {
   createWindow()
 
 })
+
+path.join(app.getPath("downloads"), "AIModel")

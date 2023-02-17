@@ -38,18 +38,10 @@
 
 **Create Edge Impulse AI model:**
 - Build your own machine learning model using **[Edge Impulse](https://edgeimpulse.com)** (for now, use `environment` label for any voice or noice samples, `user1_up` and `user1_down` for user 1 up/down points voice samples, `user2_up` and `user2_down` for user 2 up/down points voice samples) 
-- Generate `.eim` file (enable **Show linux deploy options** under *Administrative zone* on the project dashboard and from **Deployment** menu choose Linux) and download it
+- Generate `.eim` file (enable **Show linux deploy options** under *Administrative zone* on the project dashboard and from **Deployment** menu choose Linux -> **x86** for PC and **ARMv7** for Raspberry) and download it
 
 **Run app:**
-- Download latest **[Node.js](https://nodejs.org/)**
-- Get latest code from **[releases](https://github.com/LukeMech/Ping-Pong_Counter/releases/latest)** (look for `.zip` file)
-- Unpack code and use:
-```
-$ npm install
-```
-- Copy your `.eim` file to `src/AI-model`
-- Make sure that `autoUpdateAI` is set to **false** in `src/preferences.json` file to prevent your model from being overwritten
-- Run, using command: 
-```
-$ npm start
-```
+- Get latest app from **[releases](https://github.com/LukeMech/Ping-Pong_Counter/releases/latest)** (look for `.AppImage` file with your architecture, for **PC** use **x64** and for Raspberry use **armv7l**)
+- Copy your `.eim` file to `Downloads/AIModel` folder
+- Create blank file `do-not-update.txt` inside your `AIModel` folder, this will prevent model from being overwritten
+- Run 
