@@ -25,6 +25,7 @@ jobs:
 
       - name: Build and release Electron app
         run: |
+          sudo apt update && sudo apt upgrade
           sudo apt install libarchive-tools
           npm install
           npm run publish
