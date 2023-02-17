@@ -23,9 +23,24 @@ jobs:
         with:
           node-version: latest
 
-      - name: Build and release Electron app
+      - name: Build and upload Electron app
+        id: info
         run: |
           sudo apt update && sudo apt upgrade
           sudo apt install libarchive-tools
           npm install
           npm run publish
+
+          r=$(cat release.md)        
+          r="${r//'%'/'%25'}"                          
+          r="${r//$'\n'/'%0A'}"                   
+          r="${r//$'\r'/'%0D'}"                         
+          echo "RELEASE_BODY=$r" >> $GITHUB_OUTPUT  
+          echo "ver=${GITHUB_REF#refs/*/}" >> $GITHUB_OUTPUT  
+
+      - name: Publish release
+        uses: softprops/action-gh-release@master
+        with:
+          name: ${{ steps.info.outputs.ver }}
+          body: ${{ steps.info.outputs.RELEASE_BODY }}
+          draft: false
