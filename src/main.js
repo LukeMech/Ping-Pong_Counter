@@ -30,7 +30,9 @@ app.whenReady().then(() => {createWindow()})
 ipcMain.on('ask-for-AI', (event) => {
 
   mainWin = event.sender
-  autoUpdater.checkForUpdates()
+
+  if(process.env.APPIMAGE) autoUpdater.checkForUpdates()
+  else mainWin.send('update-info', 'not-applicable')
 
   if (fs.existsSync(path.join(app.getPath("downloads"), "AIModel", "model.eim"))) {
     event.returnValue = true
@@ -44,6 +46,6 @@ autoUpdater.on('update-available', () => {
   autoUpdater.downloadUpdate()
   mainWin.send('update-info', 'downloading')
 })
-autoUpdater.on('update-not-available', () => { mainWin.send('update-info', 'uptodate'); console.log('xd')})
+autoUpdater.on('update-not-available', () => { mainWin.send('update-info', 'up-to-date'); console.log('xd')})
 autoUpdater.on('error', () => {   mainWin.send('update-info', 'error')})
-autoUpdater.on('update-downloaded', () => {   mainWin.send('update-info', 'readytoinstall')})
+autoUpdater.on('update-downloaded', () => {   mainWin.send('update-info', 'ready-to-install')})

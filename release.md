@@ -6,4 +6,5 @@
 - Add animation for updater and add basic pacman depends for live ISO package
 
 # 🐛 Bugfixes in this release
-- Fix problem preventing to see update status - run update function after window start
+- Add some missing pacman deps
+- Detect if using AppImage and call don't call updater function if not
