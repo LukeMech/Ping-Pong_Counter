@@ -42,7 +42,7 @@
 
 **Run app:**
 - Get latest app from **[releases](https://github.com/LukeMech/Ping-Pong_Counter/releases/latest)** (look for `.AppImage` file with your architecture, for **PC** use **x86_64** and for **Raspberry** use **armv7l**)
-- Copy your `.eim` file to `Downloads/AIModel` folder
+- Copy your `.eim` file to `Downloads/AIModel` folder and name it `model.eim`
 - Create blank file `do-not-update.txt` inside your `AIModel` folder, this will prevent model from being overwritten
 - Make sure libfuse2 is installed (`sudo apt install libfuse2` on RPi OS)
 - Set execution permissions (`chmod +x *.AppImage`) and run

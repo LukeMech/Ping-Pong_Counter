@@ -23,7 +23,7 @@
   "homepage": "https://github.com/LukeMech/Ping-Pong_Counter#readme",
   "build": {
     "copyright": "Copyright © ${author} 2023",
-    "productName": "Ping-pong_counter", 
+    "productName": "Ping-pong_counter",
     "artifactName": "${productName}-${arch}.${ext}",
     "linux": {
       "publish": [
@@ -32,11 +32,16 @@
       "target": [
         {
           "target": "AppImage",
-          "arch": ["x64", "armv7l"]
+          "arch": [
+            "x64",
+            "armv7l"
+          ]
         },
         {
           "target": "pacman",
-          "arch": ["x64"]
+          "arch": [
+            "x64"
+          ]
         }
       ]
     }
@@ -44,5 +49,9 @@
   "devDependencies": {
     "electron": "^23.1.0",
     "electron-builder": "^23.6.0"
+  },
+  "dependencies": {
+    "edge-impulse-linux": "^1.4.2",
+    "electron-updater": "^5.3.0"
   }
 }
