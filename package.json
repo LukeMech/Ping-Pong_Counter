@@ -24,7 +24,7 @@
   "build": {
     "copyright": "Copyright © ${author} 2023",
     "productName": "Ping-pong_counter", 
-    "artifactName": "${productName}.${ext}",
+    "artifactName": "${productName}-${arch}.${ext}",
     "linux": {
       "publish": [
         "github"
@@ -32,7 +32,7 @@
       "target": [
         {
           "target": "AppImage",
-          "arch": ["x64"]
+          "arch": ["x64", "armv7l"]
         },
         {
           "target": "pacman",
