@@ -44,4 +44,4 @@
 - Get latest app from **[releases](https://github.com/LukeMech/Ping-Pong_Counter/releases/latest)** (look for `.AppImage` file with your architecture, for **PC** use **x64** and for Raspberry use **armv7l**)
 - Copy your `.eim` file to `Downloads/AIModel` folder
 - Create blank file `do-not-update.txt` inside your `AIModel` folder, this will prevent model from being overwritten
-- Run 
+- Set execution permissions for AppImage and run
