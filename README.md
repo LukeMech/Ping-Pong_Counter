@@ -31,7 +31,7 @@
 ## 🛠️ Running on your own
 
 ****
-⚠️ **Disclaimer:** Linux 64-bit or ARM64 machine running **Ubuntu**, **Fedora**, **Arch Linux** or **Raspberry Pi OS** is needed to run project <br> 
+⚠️ **Disclaimer:** Linux 64-bit or ARM64 machine running **Ubuntu**, **Fedora**, **Arch**, **Alpine** or **Raspberry Pi OS** is needed to run project <br> 
 ✅ ***Psst**, you can use Raspberry Pi 3/4 board with 64-bit OS if you have one or, if not, use my custom **[Arch live ISO](https://github.com/LukeMech/CustomArch)** that includes **all needed packages** and latest code (**no installation needed - just boot from USB**)*
 
 ****
@@ -44,5 +44,5 @@
 - Get latest app from **[releases](https://github.com/LukeMech/Ping-Pong_Counter/releases/latest)** (look for `.AppImage` file with your architecture, for **PC** use **x86_64** and for **Raspberry** use **arm64**)
 - Copy your `.eim` file to `Downloads/AIModel` folder and name it `model.eim`
 - Create blank file `do-not-update.txt` inside your `AIModel` folder, this will prevent model from being overwritten
-- Make sure **libfuse2** and **libvips42/libvips** are installed to run AppImage (`sudo apt install libfuse2 libvips42` on RPi OS)
+- Make sure `libfuse2`/`fuse` and `libvips42`/`libvips`/`vips` are installed to run AppImage (`sudo apt install libfuse2 libvips42` on RPi OS)
 - Set execution permissions (`chmod +x *.AppImage`) and run
