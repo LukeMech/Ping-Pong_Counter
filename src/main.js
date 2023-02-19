@@ -3,6 +3,7 @@ const { autoUpdater } = require('electron-updater');
 const fs = require('fs');
 const path = require('path')
 const { AudioClassifier, LinuxImpulseRunner, AudioRecorder } = require("edge-impulse-linux");
+autoUpdater.autoDownload = false
 
 let mainWin
 function createWindow () {

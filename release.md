@@ -6,5 +6,4 @@
 - Add animation for updater and add basic pacman depends for live ISO package
 
 # 🐛 Bugfixes in this release
-- Add some missing pacman deps
-- Detect if using AppImage and call don't call updater function if not
+- Updater failing to apply update after download
