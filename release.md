@@ -5,5 +5,4 @@
 # 🎯 Changes for v0.2
 - Add animation for updater and add basic pacman depends for live ISO package
 
-# 🐛 Bugfixes in this release
-- Updater failing to apply update after download
+# 🪄 Bumped electron version
