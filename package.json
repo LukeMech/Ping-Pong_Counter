@@ -1,11 +1,11 @@
 {
   "name": "ping-pong-counter",
-  "version": "0.2.4",
-  "description": "🏓 Auto ping-pong counter app for linux - using Edge Impulse ML to recognize voice",
+  "version": "0.3.0",
+  "description": "🏓 Auto ping-pong counter app",
   "main": "src/main.js",
   "scripts": {
     "start": "electron .",
-    "dist": "electron-builder --linux -p never"
+    "dist": "electron-builder --linux --windows -p never"
   },
   "repository": {
     "type": "git",
@@ -26,16 +26,9 @@
     "productName": "Ping-pong",
     "artifactName": "PingPongCounter-${arch}.${ext}",
     "pacman": {
-      "depends": [
-        "libvips",
-        "openjpeg2"
-      ],
       "description": "Auto ping-pong counter"
     },
     "linux": {
-      "publish": [
-        "github"
-      ],
       "target": [
         {
           "target": "AppImage",
@@ -58,7 +51,6 @@
     "electron-builder": "^23.6.0"
   },
   "dependencies": {
-    "edge-impulse-linux": "^1.4.2",
     "electron-updater": "^5.3.0"
   }
 }

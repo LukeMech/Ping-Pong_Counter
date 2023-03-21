@@ -1,7 +1,6 @@
 const ipcRenderer = require('electron').ipcRenderer;
 
-// const AIAvailable = ipcRenderer.send('ask-for-AI')
-ipcRenderer.send('ask-for-AI')
+ipcRenderer.send('hello')
 
 ipcRenderer.on('update-info', (event, info) => {
   const updateStatus = document.getElementById('upd-info')
